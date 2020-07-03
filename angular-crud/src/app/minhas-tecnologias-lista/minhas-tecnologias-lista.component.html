@@ -1,0 +1,19 @@
+<div class="card #00897b teal darken-3" *ngFor="let minhaTecnologia of minhasTecnologias | async">
+    <div class="card-content white-text">
+      <span class="card-title">{{ minhaTecnologia.nome }}</span>
+      <p>Descrição:   {{ minhaTecnologia.descricao }} </p>
+    </div>
+    <div class="card-action">
+      Desenvolvedores do Projeto:   {{ minhaTecnologia.desenvolvedores }}
+    </div>
+    <div class="card-action">
+      Data de criação:   {{ minhaTecnologia.dataCriacao }}
+    </div>
+    <div>
+        <a class="waves-effect waves-light btn" 
+        (click)="edit(minhaTecnologia, minhaTecnologia.key)">Editar</a>
+        <a class="waves-effect waves-light btn right" id="excluir" 
+        (click)="delete(minhaTecnologia.key)">Excluir</a>
+    </div>
+    
+</div>

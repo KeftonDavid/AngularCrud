@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularcrud-c6635": {
+      "hosting": {
+        "angular-crud": [
+          "angularcrud-c6635"
+        ]
+      }
+    }
+  }
+}
