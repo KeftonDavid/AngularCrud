@@ -3,22 +3,31 @@
       <div class="">
         <div class="input-field col s6">
             <h5>Registre um App</h5>
-            <div>
+            <div class="input-field">
                 <input id="input_text" type="text" data-length="20"
                 [(ngModel)]="minhasTecnologias.nome" [ngModelOptions]="{standalone: true}">
                 <label for="input_text">Nome do App</label>
             </div>
-            <div>
+            
+            <div class="input-field">
                 <input id="input_text" type="text" data-length="20"
                 [(ngModel)]="minhasTecnologias.descricao" [ngModelOptions]="{standalone: true}">
                 <label for="input_text">Descrição do App</label>
             </div>
-            <div>
-                <input id="input_text" type="text" data-length="20"
-                [(ngModel)]="minhasTecnologias.desenvolvedores" [ngModelOptions]="{standalone: true}">
-                <label for="input_text">Desenvolvedores</label>
-            </div>
-            <div> 
+
+            <div>    
+                <div *ngFor="let item of dev; let i = index" class="input-field">
+                    <input id="input_text" type="text" data-length="20"
+                     [(ngModel)]="minhasTecnologias.desenvolvedores[i]" [ngModelOptions]="{standalone: true}">
+                    <label for="input_text">Desenvolvedores</label>
+                    <div>
+                        <a class="waves-effect waves-light btn-small" id="botaoAdicionar" (click)="adicionarDev()">Adicionar Desenvolvedor</a>
+                        <a class="waves-effect waves-light btn-small #f44336 red" (click)="removerDev()" *ngIf="dev.length > 1">Remover Desenvolvedor</a>
+                    </div>    
+                </div>
+            </div>    
+            
+            <div class="input-field"> 
                 <input id="input_text" type="text" data-length="20"
                 [(ngModel)]="minhasTecnologias.dataCriacao" [ngModelOptions]="{standalone: true}">
                 <label for="input_text">Data de criação</label>

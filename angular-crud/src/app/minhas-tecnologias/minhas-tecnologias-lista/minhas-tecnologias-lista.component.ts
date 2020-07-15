@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { MinhasTecnologiasDataService } from '../minhas-tecnologias/minhas-tecnologias-data.service';
-import { MinhasTecnologiasService } from './../minhas-tecnologias/minhas-tecnologias.service';
-import { MinhasTecnologias } from '../minhas-tecnologias/minhas-tecnologias';
+import { MinhasTecnologiasDataService } from '../minhas-tecnologias-data.service';
+import { MinhasTecnologiasService } from '../minhas-tecnologias.service';
+import { MinhasTecnologias } from '../minhas-tecnologias';
 
 @Component({
   selector: 'app-minhas-tecnologias-lista',

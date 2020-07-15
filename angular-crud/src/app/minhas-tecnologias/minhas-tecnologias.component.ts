@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { MinhasTecnologias } from './minhas-tecnologias'; 
 import { MinhasTecnologiasService } from './minhas-tecnologias.service';
@@ -15,7 +15,9 @@ export class MinhasTecnologiasComponent implements OnInit {
 
   minhasTecnologias: MinhasTecnologias;
   key: string;
-
+  dev: string[] = [
+    ''
+  ];
   constructor(
     private minhasTecnologiasService: MinhasTecnologiasService,
     private minhasTecnologiasDataService: MinhasTecnologiasDataService
@@ -33,6 +35,16 @@ export class MinhasTecnologiasComponent implements OnInit {
         this.key = data.key;
       }
     })
+  }
+
+  adicionarDev(){
+    this.dev.push('');
+  }
+
+  removerDev(){
+    if(this.dev.length > 1){
+      this.dev.pop();
+    }
   }
 
   onSubmit(){

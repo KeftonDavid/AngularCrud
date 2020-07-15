@@ -13,7 +13,10 @@
       <div class="nav-wrapper #00897b teal darken-1">
         <a href="#" class="brand-logo">MyTech</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a>Minhas tecnologias</a></li>
+          <li routerLink="login" routerLinkActive="active"><a>Login</a></li>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li routerLink="minhasTecnologias" routerLinkActive="active" *ngIf="user$ |async as user"><a>Minhas tecnologias</a></li>
         </ul>
       </div>
     </nav>
@@ -24,7 +27,7 @@
 
   <main>
     <div class="container">
-      <app-minhas-tecnologias></app-minhas-tecnologias>
+      <router-outlet></router-outlet>
     </div>
   </main>
   

@@ -2,6 +2,8 @@
 export class MinhasTecnologias{
     nome: string = '';
     descricao: string = '';
-    desenvolvedores: string = '';
+    desenvolvedores: string [] = [
+        ''
+    ];
     dataCriacao: string = '';
 }
